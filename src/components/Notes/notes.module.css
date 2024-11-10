@@ -29,7 +29,7 @@ body {
   
   .NotesContent {
     border-radius: 0rem 0rem 0rem 0.9375rem;
-    background: #f7ecdc;
+    background: #DAE5F5;
     width: 67vw;
     height: 63vh;
     overflow-y: scroll;
@@ -44,12 +44,9 @@ body {
   .NotesEnter {
     background-color: #e8e8e8;
     height: 20vh;
-  
-    /* center */
     display: flex;
     justify-content: center;
     align-items: center;
-  
     position: fixed;
     bottom: 0px;
     width: 77vw;

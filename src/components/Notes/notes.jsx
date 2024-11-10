@@ -21,10 +21,8 @@ const Notes = ({userIdClicked}) => {
     borderRadius: "50%",
     minWidth: "61px",
     minHeight: "61px",
-
     maxWidth: "61px",
     maxHeight: "61px",
-    // text
     color: "#FFF",
     fontFamily: "Roboto",
     fontSize: "1.50719rem",
@@ -37,8 +35,6 @@ const Notes = ({userIdClicked}) => {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-
-    // UpperCase
     textTransform: "uppercase",
   };
 

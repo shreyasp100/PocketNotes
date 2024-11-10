@@ -3,12 +3,12 @@ import React from "react";
 
 const NotesGroup = ({ id,groupName, color,buttonColorId }) => {
 
-    const imageText = groupName.length;
+  const imageText = groupName.length;
   const NotesImage = {
     backgroundColor: `${color}`,
-    borderRadius: "50%",
-    minWidth: "61px",
-    minHeight: "61px",
+    borderRadius: "100%",
+    minWidth: "48px",
+    minHeight: "48px",
 
     // text
     color: "#FFF",
