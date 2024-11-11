@@ -19,7 +19,6 @@ const HomePage = () => {
     setUserIdClicked(IDnum);
   };
     
-    // Setting stored data as default
     const [createGroup, setCreateGroup] = useState({
       id: 0,
       groupName: "",
@@ -47,17 +46,12 @@ const HomePage = () => {
     };
   
     const handleSubmit = (e) => {
-      // e.preventDefault();
       console.log(submitCheck + "submitCheck");
       if (submitCheck() === true) {
         setCreateGroup({ ...createGroup, create: true });
-        // {console.log(idChange())}
         setOpen(false);
       }
-    };
-  
-    // color functions+++++++++++++++++++++++++++++++++++++++++++
-  
+    };  
     const funColor1 = () => {
       setCreateGroup({ ...createGroup, color: "#B38BFA" });
       setColorChoice(true);
@@ -91,7 +85,6 @@ const HomePage = () => {
     return (
       <>
     <div className={StyleHomePage.homeMainPage}>
-         {/*  desktop version */}
           {submitCheck() ? (
             <div className={StyleHomePage.hideWhenMobile}>
             <LeftSidePanel
@@ -119,7 +112,6 @@ const HomePage = () => {
             </div>
             )
           }
-        {/* mobile version  */}
          { submitCheck() && isVisible ? (
           <div className={StyleHomePage.hideWhenPc}>
             <LeftSidePanel
@@ -163,16 +155,7 @@ const HomePage = () => {
             )
           }
   
-  
-  
-         
-  
-  
-  
-  
-  
         </div>
-        {/* ?,modal  #################################################################### */}
         <Modal
           open={open}
           onClose={() => {setOpen(false);window.location.reload()}}

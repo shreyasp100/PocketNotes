@@ -2,18 +2,24 @@ import NotesGroup from "../NotesGroup/notesGroup";
 import StylesLeftSide from "./leftSide.module.css";
 import React, { useState, useEffect, useMemo, useCallback } from "react";
 
-const LeftSidePanel = ({ handleClick, handleUserIdClicked, id, groupName, color, create }) => {
+const LeftSidePanel = ({
+  handleClick,
+  handleUserIdClicked,
+  id,
+  groupName,
+  color,
+  create,
+}) => {
   const [clickedButton, setClickedButton] = useState(null);
 
-  // Memoize stored data to avoid dependency changes in useEffect
   const storedData = useMemo(() => {
     const storedDataString = localStorage.getItem("groupNamesData");
     return JSON.parse(storedDataString) || [];
   }, []);
 
-  // Create a new data object and memoize it
   const newData = useMemo(() => {
-    const newId = storedData.length > 0 ? storedData[storedData.length - 1].id + 1 : 1;
+    const newId =
+      storedData.length > 0 ? storedData[storedData.length - 1].id + 1 : 1;
     return {
       id: newId,
       groupName: groupName,
@@ -22,8 +28,10 @@ const LeftSidePanel = ({ handleClick, handleUserIdClicked, id, groupName, color,
     };
   }, [storedData, groupName, color, create]);
 
-  // Memoize submitCheck to avoid dependency changes in useEffect
-  const submitCheck = useCallback(() => groupName !== "" && create === true, [groupName, create]);
+  const submitCheck = useCallback(
+    () => groupName !== "" && create === true,
+    [groupName, create]
+  );
 
   useEffect(() => {
     if (submitCheck()) {
@@ -55,7 +63,10 @@ const LeftSidePanel = ({ handleClick, handleUserIdClicked, id, groupName, color,
           <div style={{ display: "flex", flexDirection: "column-reverse" }}>
             {storedData.map((group) =>
               group.create ? (
-                <div className={StylesLeftSide.notesGroupSlected} key={group.id}>
+                <div
+                  className={StylesLeftSide.notesGroupSlected}
+                  key={group.id}
+                >
                   <span
                     className={StylesLeftSide.act}
                     style={buttonStyle(group.id)}
@@ -64,7 +75,11 @@ const LeftSidePanel = ({ handleClick, handleUserIdClicked, id, groupName, color,
                       handleButtonClick(group.id);
                     }}
                   >
-                    <NotesGroup groupName={group.groupName} color={group.color} buttonColorId={group.id} />
+                    <NotesGroup
+                      groupName={group.groupName}
+                      color={group.color}
+                      buttonColorId={group.id}
+                    />
                   </span>
                 </div>
               ) : null
@@ -72,8 +87,15 @@ const LeftSidePanel = ({ handleClick, handleUserIdClicked, id, groupName, color,
           </div>
         </div>
       </div>
-      <button className={StylesLeftSide.floatingButton} onClick={() => handleClick(true)}>
-        <img src="assets/+.svg" alt="+" style={{ width: "24px", height: "24px" }} />
+      <button
+        className={StylesLeftSide.floatingButton}
+        onClick={() => handleClick(true)}
+      >
+        <img
+          src="assets/+.svg"
+          alt="+"
+          style={{ width: "24px", height: "24px" }}
+        />
       </button>
     </div>
   );

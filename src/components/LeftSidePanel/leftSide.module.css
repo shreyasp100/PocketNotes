@@ -1,33 +1,33 @@
 .leftSidePanel {
-  background: #fff;
+  background: white;
   width: 23vw;
-  height: 98.3vh;
+  height: 98vh;
   display: flex;
   flex-direction: column;
   padding: 1.5% 1.5% 1.5% 1.5%;
   overflow-x: hidden;
   overflow-y: scroll;
-  position: relative; /* Added for positioning the floating button */
+  position: relative; 
 }
 
 .floatingButton {
   position: absolute;
-  bottom: 20px; /* Distance from the bottom */
-  right: 20px; /* Distance from the right */
+  bottom: 20px; 
+  right: 20px; 
   background-color: #16008B;
   border: none;
-  border-radius: 50%; /* Makes the button circular */
-  width: 50px; /* Adjust button size */
-  height: 50px; /* Adjust button size */
+  border-radius: 50%;
+  width: 50px; 
+  height: 50px; 
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff; /* Icon color */
+  color: white; 
   cursor: pointer;
 }
 
 .createNotesGroup {
-  display: none; /* Hide this class if it's still referenced */
+  display: none;
 }
 
 .center {
@@ -46,15 +46,15 @@
 
 @media (max-width: 600px) {
   .leftSidePanel {
-    width: 100vw;
     height: 100vh;
+    width: 100vw;
     overflow-x: hidden;
     overflow-y: scroll;
   }
 
   .floatingButton {
-    width: 50px;
     height: 50px;
+    width: 50px;
   }
 
   .notesGroupSlected {

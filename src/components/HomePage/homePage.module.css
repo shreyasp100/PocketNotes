@@ -16,48 +16,48 @@
   
 .colorButton1 {
     border-radius: 50%;
-    min-width: 29px;
-    min-height: 29px;
+    min-width: 30px;
+    min-height: 30px;
     background-color: #b38bfa;
     border: 0px solid #b48bfa00;
   }
   
   .colorButton2 {
     border-radius: 50%;
-    min-width: 29px;
-    min-height: 29px;
+    min-width: 30px;
+    min-height: 30px;
     background-color: #ff79f2;
     border: 0px solid #b48bfa00;
   }
   
   .colorButton3 {
     border-radius: 50%;
-    min-width: 29px;
-    min-height: 29px;
+    min-width: 30px;
+    min-height: 30px;
     background-color: #43e6fc;
     border: 0px solid #b48bfa00;
   }
   
   .colorButton4 {
     border-radius: 50%;
-    min-width: 29px;
-    min-height: 29px;
+    min-width: 30px;
+    min-height: 30px;
     background-color: #f19576;
     border: 0px solid #b48bfa00;
   }
   
   .colorButton5 {
     border-radius: 50%;
-    min-width: 29px;
-    min-height: 29px;
+    min-width: 30px;
+    min-height: 30px;
     background-color: #0047ff;
     border: 0px solid #b48bfa00;
   }
   
   .colorButton6 {
     border-radius: 50%;
-    min-width: 29px;
-    min-height: 29px;
+    min-width: 30px;
+    min-height: 30px;
     background-color: #6691ff;
     border: 0px solid #b48bfa00;
   }
@@ -71,7 +71,6 @@
     justify-content: center;
     justify-items: center;
     flex-wrap: wrap;
-    /* width: 11px; */
   }
   
   @media screen and (max-width: 600px) {
@@ -82,21 +81,17 @@
   }
   
   .create {
-    /* text */
     color: #fff;
     font-family: Roboto;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 160.188%; /* 2.00238rem */
+    line-height: 160.188%; 
     letter-spacing: 0.04375rem;
-  
     min-width: 111px;
     min-height: 41px;
-    /* button */
     border-radius: 0.6875rem;
     background: #000;
-  
     position: relative;
     right: -75%;
   }
@@ -126,8 +121,8 @@
     font-family: Roboto;
     font-size: 1.8125rem;
     font-style: normal;
-    font-weight: 579;
-    line-height: 160.188%; /* 2.90338rem */
+    font-weight: 580;
+    line-height: 160.188%; 
     letter-spacing: 0.06344rem;
   }
   
@@ -137,7 +132,7 @@
     font-size: 1.70713rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 160.188%; /* 2.73463rem */
+    line-height: 160.188%; 
     letter-spacing: 0.05975rem;
   }
   

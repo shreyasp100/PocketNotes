@@ -28,10 +28,8 @@ const Notes = ({userIdClicked}) => {
     fontSize: "1.50719rem",
     fontStyle: "normal",
     fontWeight: 500,
-    lineHeight: "97.688%" /* 1.47238rem */,
+    lineHeight: "97.688%" ,
     letterSpacing: "0.03013rem",
-
-    // center
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -39,12 +37,9 @@ const Notes = ({userIdClicked}) => {
   };
 
   const myNotesFunction = (e) => {
-    // ?time
     const currentNotesDate = new Date();
     const noteTimeWithSeconds = currentNotesDate.toLocaleTimeString();
     const NoteTimeWithoutSeconds = noteTimeWithSeconds.replace(/:\d{2}\s/, " ");
-
-    // date
     const currentDate = new Date();
     const notesDay = currentDate.getDate();
     const notesMonth = new Intl.DateTimeFormat("en-US", {
@@ -54,7 +49,6 @@ const Notes = ({userIdClicked}) => {
 
     const notesDate = `${notesDay} ${notesMonth} ${notesYear}`;
 
-    // storing in state
     setMyNotes({
       ...myNotes,
       id: userIdClicked,
@@ -124,7 +118,6 @@ const Notes = ({userIdClicked}) => {
             </div>
             <div className={StyleNotes.NotesName}>{groupName}</div>
           </div>
-          {/* <br/><br/><br/><br/> */}
           <div className={StyleNotes.NotesContent}>
             {  reterivingMyNotes()}
           </div>

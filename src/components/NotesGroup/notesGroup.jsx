@@ -9,22 +9,16 @@ const NotesGroup = ({ id,groupName, color,buttonColorId }) => {
     borderRadius: "100%",
     minWidth: "48px",
     minHeight: "48px",
-
-    // text
     color: "#FFF",
     fontFamily: "Roboto",
     fontSize: "1.50719rem",
     fontStyle: "normal",
     fontWeight: 500,
-    lineHeight: "97.688%" /* 1.47238rem */,
+    lineHeight: "97.688%",
     letterSpacing: "0.03013rem",
-
-    // center
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-
-    // UpperCase
     textTransform: "uppercase"
   };
 
